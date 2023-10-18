@@ -2,9 +2,9 @@
     "version": 2,
     "name": "job-searcher",
     "builds": [
-       { "src": "index.js", "use": "@vercel/node" }
+       { "src": "index.cjs", "use": "@vercel/node" }
     ],
     "routes": [
-       { "src": "/(.*)", "dest": "/index.js" }
+       { "src": "/(.*)", "dest": "/index.cjs" }
     ]
  }
