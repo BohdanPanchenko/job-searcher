@@ -2,11 +2,12 @@
 // const nodemailer = require("nodemailer");
 // const cheerio = require("cheerio");
 // const dotenv = require("dotenv");
-import { express } from "express";
+import express from "express";
 import axios from "axios";
 import nodemailer from "nodemailer";
 import cheerio from "cheerio";
 import dotenv from "dotenv";
+
 const app = express();
 const port = 3000;
 dotenv.config();
