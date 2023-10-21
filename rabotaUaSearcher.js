@@ -44,4 +44,3 @@ function includesAllValues(arr1, arr2) {
 }
 
 export default rabotaUaChecker;
-module.exports = [puppeteer, cheerio];
