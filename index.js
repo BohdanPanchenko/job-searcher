@@ -2,10 +2,13 @@
 // const nodemailer = require("nodemailer");
 // const cheerio = require("cheerio");
 // const dotenv = require("dotenv");
+import { express } from "express";
 import axios from "axios";
 import nodemailer from "nodemailer";
 import cheerio from "cheerio";
 import dotenv from "dotenv";
+const app = express();
+const port = 3000;
 dotenv.config();
 
 import rabotaUaChecker from "./rabotaUaSearcher.js";
@@ -107,3 +110,17 @@ async function checkVacanciesAndSendEmail() {
 
 // setTimeout(checkVacanciesAndSendEmail, checkInterval);
 setInterval(checkVacanciesAndSendEmail, checkInterval);
+
+app.get("/", async (req, res) => {
+  try {
+    res.sendStatus(200);
+  } catch (err) {
+    console.log(err);
+    res.send(err);
+  }
+});
+app.listen(port, () => {
+  console.log("Server starting...");
+});
+
+export default app;
