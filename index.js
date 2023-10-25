@@ -31,6 +31,11 @@ const vacanciesData = [
     lastVacancyName: "",
   },
   {
+    url: "https://www.work.ua/jobs-react/",
+    selector: ".job-link a",
+    lastVacancyName: "",
+  },
+  {
     url: "https://www.work.ua/jobs-javascript/",
     selector: ".job-link a",
     lastVacancyName: "",
@@ -122,6 +127,7 @@ app.get("/", async (req, res) => {
 });
 app.listen(port, () => {
   console.log("Server starting...");
+  setInterval(checkVacanciesAndSendEmail, checkInterval);
 });
 
 export default app;
