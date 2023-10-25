@@ -114,8 +114,7 @@ async function checkVacanciesAndSendEmail() {
   );
 }
 
-// setTimeout(checkVacanciesAndSendEmail, checkInterval);
-setInterval(checkVacanciesAndSendEmail, checkInterval);
+// setInterval(checkVacanciesAndSendEmail, checkInterval);
 
 app.get("/", async (req, res) => {
   try {
